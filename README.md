@@ -29,7 +29,7 @@ String[] tecnologias = {
 ## Funcionalidades da API
 ### **1. Cadastrar pontos de interesse (POI)**
 
-**POST** `/create`
+**POST** `/points/create`
 
 Exemplo de JSON enviado
 ```json
@@ -60,7 +60,7 @@ Exemplo de JSON enviado
 
 ### **3. Buscar Pontos Próximos**
 
-**GET** `/nearby?max_distance=10&position_x=20&position_y=10`
+**GET** `/points/nearby?max_distance=10&position_x=20&position_y=10`
 
 - `position_x`: posição X de referência
 - `position_y`: posição Y de referência
