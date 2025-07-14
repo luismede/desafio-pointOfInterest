@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/points")
 public class PointOfInterestController {
     @Autowired
     private PointOfInterestService service;
@@ -23,12 +23,12 @@ public class PointOfInterestController {
         return new ResponseEntity<>(poi, HttpStatus.CREATED);
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public List<PointOfInterestDTO> findAll() {
         return service.findAll();
     }
 
-    @GetMapping("/location")
+    @GetMapping("/nearby")
     public List<PointOfInterestDTO> listAllByLocation(@RequestParam Long max_distance, Long position_x, Long position_y) {
         return service.findAllByNearbyLocation(max_distance, position_x, position_y);
     }
