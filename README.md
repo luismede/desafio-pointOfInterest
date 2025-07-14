@@ -60,7 +60,7 @@ Exemplo de JSON enviado
 
 ### **3. Buscar Pontos Próximos**
 
-**GET** `/location?max_distance=10&position_x=20&position_y=10`
+**GET** `/nearby?max_distance=10&position_x=20&position_y=10`
 
 - `position_x`: posição X de referência
 - `position_y`: posição Y de referência
